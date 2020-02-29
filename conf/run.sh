@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # Shell script for building and configuring the complete environment for
-# `docker_as_vagrant`.
+# `dummy`.
 #
 # Assumptions:
 #   - `docker` is installed and available as $(which docker)
@@ -11,8 +11,8 @@ DOCKER=$(which docker)
 GIT=$(which git)
 
 GIT_REPO_ROOT=$(git rev-parse --show-toplevel)
-DOCKER_IMAGE_NAME='docker_as_vagrant:latest'
-DOCKER_CONTAINER_NAME='docker_as_vagrant'
+DOCKER_IMAGE_NAME='dummy:latest'
+DOCKER_CONTAINER_NAME='dummy'
 
 $DOCKER build $GIT_REPO_ROOT/conf \
     --tag $DOCKER_IMAGE_NAME
